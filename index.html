@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Massively by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
         <title>Akash Portfolio</title>
@@ -37,7 +32,7 @@
                         <ul class="links">
                             <li class="active"><a href="#posts">Projects</a></li>
                             <li><a href="skills.html">Skills</a></li>
-                            <!-- <li><a href="elements.html">Elements Reference</a></li> -->
+                            <li><a href="certification.html">Certification</a></li>
                         </ul>
                         <ul class="icons">
                             <!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -57,13 +52,15 @@
                                     <h2><a href="#">Introduction</a></h2>
                                     <p>This is Akash and I work as an Associate Software Engineer 2 in Price Water Cooper Acceleration Center , Bangalore.</p>
                                 </header>
-                                <a href="#" class="image main" style="text-align: -webkit-center;"><img src="images/headshot.png" alt="Avatar" style="border-radius: 50%;width: 500px;height: 500px;" /></a>
+                                <a href="#" class="image main" style="text-align: -webkit-center;">
+                                    <img src="images/headshot.png" alt="Avatar" style="border-radius: 50%;width: 40%;height: 30%;" /></a>
                                 <ul class="actions special">
                                     <li><a href="#" class="button large">Full Story</a></li>
                                 </ul>
                             </article>
 
                         <!-- Posts -->
+                        <h2 style="text-align: center;"><a href="#posts">Projects</a></h2>
                             <section class="posts" id="posts">
                             </section>
 
@@ -103,7 +100,7 @@
                                     </div>
                                 </div>
                                 <ul class="actions">
-                                    <li><input type="submit" value="Send Message" /></li>
+                                    <li><input type="submit" value="Send Message" onclick="submitButton()"/></li>
                                 </ul>
                             </form>
                         </section>
@@ -119,7 +116,7 @@
                             </section>
                             <section>
                                 <h3>Email</h3>
-                                <p><a href="#">thisisakashu@gmail.com</a></p>
+                                <p><a onclick="openEmail()">thisisakashu@gmail.com</a></p>
                             </section>
                             <section>
                                 <h3>Social</h3>
@@ -132,9 +129,9 @@
                     </footer>
 
                 <!-- Copyright -->
-                    <div id="copyright">
+                    <!-- <div id="copyright">
                         <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-                    </div>  
+                    </div>   -->
 
             </div>
 
@@ -148,6 +145,20 @@
             <script src="assets/js/main.js"></script>
             <!-- <script  type="module" src="data/projectsData.js"></script> -->
             <script>
+                const submitButton = () =>{
+                    let name = document.getElementById("name").innerHTML;
+                    name = name.replace(" ","%20");
+                    let email = document.getElementById("email").innerHTML;
+                    let message = document.getElementById("message").innerHTML;   
+                    message = message.replace(" ","%20");
+                    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=thisisakashu@gmail.com&su=Reached%20From%20Portfolio%20By%20${name}&body=Hello%20Akash,%0AThis%20is%20${name}%0A${message}`)
+                }
+                function openInNewTab(){
+                    window.open("https://www.w3schools.com");
+                }
+                function openEmail(){
+                    window.open("mailto:thisisakashu@gmail.com");
+                }
                 var options = { year: 'numeric', month: 'long', day: 'numeric' };
                  const projectData = [
                     {
