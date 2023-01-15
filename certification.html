@@ -235,7 +235,7 @@
                     element.innerHTML += `<tr>
 												<td>${each.name}</td>
 												<td>${each.cName}.</td>
-												<td><a ${each.link ? href="${each.link}" : ""}>${each.link ? "Link" : "-"}</a></td>
+												<td><a href=${each.link ? each.link  : ""}>${each.link ? "Link" : "-"}</a></td>
 											</tr>`	
                 });
 				
